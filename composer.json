@@ -1,5 +1,5 @@
 {
-    "name": "henrotaym/laravel-trustup-io-projects",
+    "name": "deegitalbe/laravel-trustup-io-projects",
     "description": "Basic versioned php package.",
     "type": "library",
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Mathieu Henrotay",
             "email": "mathieu.henrotay@gmail.com"
+        },
+        {
+            "name": "Axel Marquet",
+            "email": "axel.marquet@trustup.be"
         }
     ],
     "require": {
