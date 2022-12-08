@@ -1,5 +1,5 @@
 {
-    "name": "henrotaym/versioning-package-template",
+    "name": "henrotaym/laravel-trustup-io-projects",
     "description": "Basic versioned php package.",
     "type": "library",
     "license": "MIT",
@@ -18,18 +18,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\": "src"
+            "Deegitalbe\\LaravelTrustupIoProjects\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\Tests\\": "tests"
+            "Deegitalbe\\LaravelTrustupIoProjects\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Henrotaym\\VersioningPackageTemplate\\Providers\\VersioningPackageTemplateServiceProvider"
+                "Deegitalbe\\LaravelTrustupIoProjects\\Providers\\LaravelTrustupIoProjectsServiceProvider"
             ]
         }
     }

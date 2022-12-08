@@ -1,1 +1,1 @@
-# versioning-package-template
+# laravel-trustup-io-projects
