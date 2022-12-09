@@ -423,8 +423,8 @@
                 @foreach($projects as $project)
                 <div class=" m-2 p-2 rounded-full cursor-pointer hover:bg-[#0b1835]">
 
-                    <!-- <img src="{{ $project['image'] }}" alt="logo"> -->
-                    <p>{{ $project->title }}</p>
+
+                    <p>{{ $project->getTitle() }}</p>
                 </div>
                 @endforeach
             </div>

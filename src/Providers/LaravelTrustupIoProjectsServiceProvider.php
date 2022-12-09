@@ -3,6 +3,7 @@
 namespace Deegitalbe\LaravelTrustupIoProjects\Providers;
 
 use Deegitalbe\LaravelTrustupIoProjects\Api\Endpoints\ProjectEndpoint;
+use Deegitalbe\LaravelTrustupIoProjects\Api\Requests\Project\IndexRequest;
 use Deegitalbe\LaravelTrustupIoProjects\Api\Responses\Project\IndexResponse;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
@@ -26,7 +27,7 @@ class LaravelTrustupIoProjectsServiceProvider extends VersionablePackageServiceP
     {
         //
         $this->app->bind(ProjectEndpointContract::class, ProjectEndpoint::class);
-        $this->app->bind(IndexRequestContract::class, IndexResponse::class);
+        $this->app->bind(IndexRequestContract::class, IndexRequest::class);
         $this->app->bind(ProjectContract::class, Project::class);
         $this->app->bind(IndexResponseContract::class, IndexResponse::class);
     }

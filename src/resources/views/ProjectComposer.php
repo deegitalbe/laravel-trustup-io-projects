@@ -3,6 +3,7 @@
 namespace Deegitalbe\LaravelTrustupIoProjects\resources\views;
 
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointContract;
+use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Illuminate\View\View;
 
 class ProjectComposer
@@ -18,6 +19,6 @@ class ProjectComposer
 
     public function compose(View $view)
     {
-        $view->with('projects', $this->projects);
+        $view->with('projects', $this->projects->index(app()->make(IndexRequestContract::class))->getProjects());
     }
 }
