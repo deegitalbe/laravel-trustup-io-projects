@@ -3,6 +3,7 @@ namespace Deegitalbe\LaravelTrustupIoProjects\Contracts\Models;
 
 use Illuminate\Support\Collection;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
+use Deegitalbe\LaravelTrustupIoAuthClient\Contracts\Models\TrustupUserContract;
 
 /**
  * Representing a project.
@@ -40,9 +41,9 @@ interface ProjectContract
     /**
      * Getting manager ids.
      * 
-     * @return Collection<int, int>
+     * @return ?Collection<int, int>
      */
-    public function getManagerIds(): Collection;
+    public function getManagerIds(): ?Collection;
 
     /**
      * Getting managers.
