@@ -2,6 +2,7 @@
 
 namespace Deegitalbe\LaravelTrustupIoProjects\Providers;
 
+use Deegitalbe\LaravelTrustupIoProjects\Facades\Package as FacadesPackage;
 use Deegitalbe\LaravelTrustupIoProjects\Package;
 use Henrotaym\LaravelPackageVersioning\Providers\Abstracts\VersionablePackageServiceProvider;
 
@@ -20,6 +21,6 @@ class LaravelTrustupIoProjectsServiceProvider extends VersionablePackageServiceP
     protected function addToBoot(): void
     {
         //
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'projectspackage');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', FacadesPackage::viewPrefix());
     }
 }

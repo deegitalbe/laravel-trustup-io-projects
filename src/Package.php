@@ -1,4 +1,5 @@
 <?php
+
 namespace Deegitalbe\LaravelTrustupIoProjects;
 
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\PackageContract;
@@ -8,6 +9,11 @@ class Package extends VersionablePackage implements PackageContract
 {
     public static function prefix(): string
     {
-        return "versioning_package_template";
+        return "laravel-trustup-io-projects";
+    }
+
+    public function viewPrefix()
+    {
+        return "trustup-io-projects";
     }
 }
