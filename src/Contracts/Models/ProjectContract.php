@@ -1,4 +1,5 @@
 <?php
+
 namespace Deegitalbe\LaravelTrustupIoProjects\Contracts\Models;
 
 use Illuminate\Support\Collection;
@@ -37,6 +38,13 @@ interface ProjectContract
      * @return string
      */
     public function getTitle(): string;
+
+    /**
+     * Getting image.
+     * 
+     * @return string
+     */
+    public function getImage(): string;
 
     /**
      * Getting manager ids.

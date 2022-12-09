@@ -56,6 +56,16 @@ class Project implements ProjectContract
     }
 
     /**
+     * Getting image.
+     * 
+     * @return string
+     */
+    public function getImage(): string
+    {
+        return $this->attributes['image'];
+    }
+
+    /**
      * Getting manager ids.
      * 
      * @return ?Collection<int, int>
