@@ -1,4 +1,5 @@
 <?php
+
 namespace Deegitalbe\LaravelTrustupIoProjects\Providers;
 
 use Deegitalbe\LaravelTrustupIoProjects\Package;
@@ -19,5 +20,6 @@ class LaravelTrustupIoProjectsServiceProvider extends VersionablePackageServiceP
     protected function addToBoot(): void
     {
         //
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'projectspackage');
     }
 }
