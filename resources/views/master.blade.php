@@ -428,19 +428,19 @@ $projects = [
 <body class="antialiased overflow-hidden">
     <header class="bg-white flex px-4 items-center shadow h-16">
         <a href="">
-            <img width="200px" src="https://pro.trustup.be/wp-content/uploads/2021/08/logo-png-horizontal-grand-no-baseline.png" alt="trustuplogo">
+            <img width="200px" src="https://www.trustup.pro/images/logo.svg" alt="trustuplogo">
         </a>
     </header>
     <div class="grid grid-cols-12">
-        <div class="col-span-1 w-16 bg-slate-800 flex flex-col">
-            <div class="bg-slate-900 text-center p-4">
+        <div class="col-span-1 w-16 bg-[#172851] flex flex-col">
+            <div class="bg-[#0b1835] text-center p-4">
                 <i class="fa-solid fa-grip text-white text-2xl"></i>
             </div>
             <div class="flex flex-col items-center pt-4">
 
 
                 @foreach($projects as $project)
-                <div class=" m-2 p-2 rounded-full cursor-pointer hover:bg-slate-600">
+                <div class=" m-2 p-2 rounded-full cursor-pointer hover:bg-[#0b1835]">
 
                     <img src="{{ $project['image'] }}" alt="logo">
                 </div>
