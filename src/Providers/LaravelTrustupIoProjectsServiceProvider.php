@@ -11,7 +11,9 @@ use Deegitalbe\LaravelTrustupIoProjects\Contracts\Models\ProjectContract;
 use Deegitalbe\LaravelTrustupIoProjects\Facades\Package as TrustupIoProjectsFacade;
 use Deegitalbe\LaravelTrustupIoProjects\Models\Project;
 use Deegitalbe\LaravelTrustupIoProjects\Package;
+use Deegitalbe\LaravelTrustupIoProjects\resources\views\ProjectComposer;
 use Henrotaym\LaravelPackageVersioning\Providers\Abstracts\VersionablePackageServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class LaravelTrustupIoProjectsServiceProvider extends VersionablePackageServiceProvider
 {
@@ -34,5 +36,7 @@ class LaravelTrustupIoProjectsServiceProvider extends VersionablePackageServiceP
         // @TODO use view composers to load projects automatically to your master view.
         // @see https://laravel.com/docs/9.x/views#view-composers
         $this->loadViewsFrom(__DIR__ . '/../resources/views', TrustupIoProjectsFacade::viewPrefix());
+
+        View::composer(TrustupIoProjectsFacade::viewPrefix() . '::master',  ProjectComposer::class);
     }
 }
