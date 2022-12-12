@@ -424,7 +424,7 @@
                 <div class=" m-2 p-2 rounded-full cursor-pointer hover:bg-[#0b1835]">
 
 
-                    <img src="{{ $project->getImage() }}" alt="logo">
+                    <i class="{{ $project->getIcon() }}"></i>
                 </div>
                 @endforeach
             </div>
