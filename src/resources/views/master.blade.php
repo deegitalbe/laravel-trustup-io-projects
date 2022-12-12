@@ -406,25 +406,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-@php
-$projects = [
-[
-'title' => 'Trustup Pro',
-'image' => 'https://www.tailorbrands.com/wp-content/uploads/2020/06/mcdonalds-logo-a-1.png',
-],
-[
-'title' => 'Trustup Facturation',
-'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/1024px-Android_O_Preview_Logo.png',
-],
-[
-'title' => 'Trustup Changelog',
-'image' => 'https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png',
-],
-
-];
-@endphp
-
-
 <body class="antialiased overflow-hidden">
     <header class="bg-white flex px-4 items-center shadow h-16">
         <a href="">
@@ -442,7 +423,8 @@ $projects = [
                 @foreach($projects as $project)
                 <div class=" m-2 p-2 rounded-full cursor-pointer hover:bg-[#0b1835]">
 
-                    <img src="{{ $project['image'] }}" alt="logo">
+
+                    <img src="{{ $project->getImage() }}" alt="logo">
                 </div>
                 @endforeach
             </div>
