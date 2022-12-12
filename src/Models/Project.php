@@ -8,6 +8,7 @@ use Illuminate\Support\Collection;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Deegitalbe\LaravelTrustupIoAuthClient\Contracts\Models\TrustupUserContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Models\ProjectContract;
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 
 /**
  * Representing a project.
@@ -63,6 +64,36 @@ class Project implements ProjectContract
     public function getImage(): string
     {
         return $this->attributes['image'];
+    }
+
+    /**
+     * Getting url.
+     * 
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->attributes['url'];
+    }
+
+    /**
+     * Getting icon.
+     * 
+     * @return string
+     */
+    public function getIcon(): string
+    {
+        return $this->attributes['icon'];
+    }
+
+    /**
+     * Getting group
+     * 
+     * @return 
+     */
+    public function getGroup(): ProjectGroup
+    {
+        return ProjectGroup::from($this->attributes['group']);
     }
 
     /**

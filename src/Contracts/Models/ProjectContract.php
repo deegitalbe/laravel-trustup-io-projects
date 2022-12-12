@@ -5,6 +5,7 @@ namespace Deegitalbe\LaravelTrustupIoProjects\Contracts\Models;
 use Illuminate\Support\Collection;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Deegitalbe\LaravelTrustupIoAuthClient\Contracts\Models\TrustupUserContract;
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 
 /**
  * Representing a project.
@@ -45,6 +46,27 @@ interface ProjectContract
      * @return string
      */
     public function getImage(): string;
+
+    /**
+     * Getting url.
+     * 
+     * @return string
+     */
+    public function getUrl(): string;
+
+    /**
+     * Getting icon.
+     * 
+     * @return string
+     */
+    public function getIcon(): string;
+
+    /**
+     * Getting group
+     * 
+     * @return 
+     */
+    public function getGroup(): ProjectGroup;
 
     /**
      * Getting manager ids.
