@@ -119,6 +119,11 @@ class Project implements ProjectContract
         );
     }
 
+    public function getExternalRelationIdentifier(): string|int
+    {
+        return $this->getAppKey()->value;
+    }
+
     /**
      * Telling if project is matching given app key.
      * 

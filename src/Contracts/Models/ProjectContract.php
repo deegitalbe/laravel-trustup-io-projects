@@ -5,12 +5,13 @@ namespace Deegitalbe\LaravelTrustupIoProjects\Contracts\Models;
 use Illuminate\Support\Collection;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Deegitalbe\LaravelTrustupIoAuthClient\Contracts\Models\TrustupUserContract;
+use Deegitalbe\LaravelTrustupIoExternalModelRelations\Contracts\Models\ExternalModelContract;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 
 /**
  * Representing a project.
  */
-interface ProjectContract
+interface ProjectContract extends ExternalModelContract
 {
     /**
      * Getting id.
