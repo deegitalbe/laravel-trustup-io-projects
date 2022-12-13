@@ -2,11 +2,14 @@
 
 namespace Deegitalbe\LaravelTrustupIoProjects\Resource;
 
+use Deegitalbe\LaravelTrustupIoAuthClient\Resources\TrustupUserResource;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Deegitalbe\LaravelTrustupIoProjects\Contracts\Models\ProjectContract;
 
 class ProjectResource extends JsonResource
 {
 
+    /** @var ProjectContract */
     public $resource;
 
 
@@ -24,7 +27,7 @@ class ProjectResource extends JsonResource
             "icon" => $this->resource->getIcon(),
             "group" => $this->resource->getGroup(),
             "manager_ids" => $this->resource->getManagerIds(),
-            "managers" => $this->resource->getManagers(),
+            "managers" => TrustupUserResource::collection($this->resource->getManagers()),
         ];
     }
 }

@@ -103,7 +103,7 @@ class Project implements ProjectContract
      */
     public function getManagerIds(): ?Collection
     {
-        return $this->attributes['manager_ids'];
+        return collect($this->attributes['manager_ids']);
     }
 
     /**
