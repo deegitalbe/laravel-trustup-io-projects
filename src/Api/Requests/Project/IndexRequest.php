@@ -5,6 +5,7 @@ namespace Deegitalbe\LaravelTrustupIoProjects\Api\Requests\Project;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Illuminate\Support\Collection;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 
 /**
  * Representing an index request on project endpoint.
@@ -13,6 +14,9 @@ class IndexRequest implements IndexRequestContract
 {
     /** @var Collection<int, ProjectAppKey> */
     protected Collection $appKeys;
+
+    /** @var Collection<int, ProjectGroup> */
+    protected Collection $groups;
     /**
      * Retrieving models matching given app keys only.
      * 
@@ -55,6 +59,28 @@ class IndexRequest implements IndexRequestContract
     public function hasAppKeys(): bool
     {
         return $this->getAppKeys()->isNotEmpty();
+    }
+
+    public function setGroups(Collection $groups): IndexRequestContract
+    {
+        $this->groups = $groups;
+        return $this;
+    }
+
+    public function addGroup(ProjectGroup $group): IndexRequestContract
+    {
+        $this->getGroups()->push($group);
+        return $this;
+    }
+
+    public function getGroups(): Collection
+    {
+        return $this->groups ?? $this->groups = collect();
+    }
+
+    public function hasGroups(): bool
+    {
+        return $this->getGroups()->isNotEmpty();
     }
 
     /**

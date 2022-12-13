@@ -7,6 +7,7 @@ use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointC
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Responses\Project\IndexResponseContract;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 use Henrotaym\LaravelApiClient\Contracts\ClientContract;
 use Henrotaym\LaravelApiClient\Contracts\RequestContract;
 
@@ -33,6 +34,11 @@ class ProjectEndpoint implements ProjectEndpointContract
         if ($request->hasAppKeys()) {
             $implement->addQuery([
                 'app_keys' => $request->getAppKeys()->map(fn (ProjectAppKey $appKey) => $appKey->value)->all(),
+            ]);
+        }
+        if ($request->hasGroups()) {
+            $implement->addQuery([
+                'groups' => $request->getGroups()->map(fn (ProjectGroup $group) => $group->value)->all(),
             ]);
         }
 

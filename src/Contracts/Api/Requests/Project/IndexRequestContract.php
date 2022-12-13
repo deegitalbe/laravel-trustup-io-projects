@@ -42,35 +42,35 @@ interface IndexRequestContract
     public function hasAppKeys(): bool;
 
 
-    // /**
-    //  * Retrieving models matching given groups only.
-    //  * 
-    //  * @param Collection<int,ProjectGroup> $groups
-    //  * @return static
-    //  */
-    // public function setGroups(Collection $groups): IndexRequestContract;
+    /**
+     * Retrieving models matching given groups only.
+     * 
+     * @param Collection<int,ProjectGroup> $groups
+     * @return static
+     */
+    public function setGroups(Collection $groups): IndexRequestContract;
 
-    // /**
-    //  * Adding given groups to those that should be matched.
-    //  * 
-    //  * @param ProjectGroup $group
-    //  * @return static
-    //  */
-    // public function addGroup(ProjectGroup $group): IndexRequestContract;
+    /**
+     * Adding given groups to those that should be matched.
+     * 
+     * @param ProjectGroup $group
+     * @return static
+     */
+    public function addGroup(ProjectGroup $group): IndexRequestContract;
 
-    // /**
-    //  * Getting groups that should limit request.
-    //  * 
-    //  * @return Collection<int,ProjectGroup>
-    //  */
-    // public function getGroups(): Collection;
+    /**
+     * Getting groups that should limit request.
+     * 
+     * @return Collection<int,ProjectGroup>
+     */
+    public function getGroups(): Collection;
 
-    // /**
-    //  * Telling if request should limit models retrieved by app keys.
-    //  * 
-    //  * @return bool
-    //  */
-    // public function hasGroups(): bool;
+    /**
+     * Telling if request should limit models retrieved by app keys.
+     * 
+     * @return bool
+     */
+    public function hasGroups(): bool;
 
     /**
      * Telling request to load managers or not based on given boolean.
