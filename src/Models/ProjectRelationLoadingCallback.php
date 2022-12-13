@@ -6,6 +6,7 @@ use Deegitalbe\LaravelTrustupIoExternalModelRelations\Contracts\Models\Relations
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Responses\Project\IndexResponseContract;
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Illuminate\Support\Collection;
 
 class ProjectRelationLoadingCallback implements ExternalModelRelationLoadingCallbackContract
@@ -25,7 +26,7 @@ class ProjectRelationLoadingCallback implements ExternalModelRelationLoadingCall
         /** @var IndexRequestContract */
         $request = app()->make(IndexRequestContract::class);
 
-        $request->setAppKeys($identifiers);
+        $request->setAppKeys($identifiers->map(fn (string $identifier) => ProjectAppKey::from($identifier)));
         return $this->endpoint->index($request)->getProjects();
     }
 }
