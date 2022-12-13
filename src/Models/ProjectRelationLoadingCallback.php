@@ -22,6 +22,10 @@ class ProjectRelationLoadingCallback implements ExternalModelRelationLoadingCall
 
     public function load(Collection $identifiers): Collection
     {
-        return $this->endpoint->index(app()->make(IndexRequestContract::class)->setAppKeys($identifiers))->getProjects();
+        /** @var IndexRequestContract */
+        $request = app()->make(IndexRequestContract::class);
+
+        $request->setAppKeys($identifiers);
+        return $this->endpoint->index($request)->getProjects();
     }
 }

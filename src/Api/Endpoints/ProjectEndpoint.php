@@ -32,7 +32,7 @@ class ProjectEndpoint implements ProjectEndpointContract
 
         if ($request->hasAppKeys()) {
             $implement->addQuery([
-                'app_keys' => $request->getAppKeys(),
+                'app_keys' => $request->getAppKeys()->all(),
             ]);
         }
 
