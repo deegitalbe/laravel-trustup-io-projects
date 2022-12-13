@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4eca70985e8e87f0af60ecc992e6c37e",
+    "content-hash": "c638a2e779bb768ca0cd7d59b0110865",
     "packages": [
         {
             "name": "deegitalbe/laravel-trustup-io-auth-client",
@@ -61,16 +61,16 @@
         },
         {
             "name": "deegitalbe/laravel-trustup-io-external-model-relations",
-            "version": "v0.0.2",
+            "version": "v0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations.git",
-                "reference": "a2400e224533c2c04fe3a098fc715ed8fe2fc1c3"
+                "reference": "c3e6711120b923d595f7a172439af07a455ff68d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-external-model-relations/zipball/a2400e224533c2c04fe3a098fc715ed8fe2fc1c3",
-                "reference": "a2400e224533c2c04fe3a098fc715ed8fe2fc1c3",
+                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-external-model-relations/zipball/c3e6711120b923d595f7a172439af07a455ff68d",
+                "reference": "c3e6711120b923d595f7a172439af07a455ff68d",
                 "shasum": ""
             },
             "require": {
@@ -108,9 +108,9 @@
             "description": "Basic versioned php package.",
             "support": {
                 "issues": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/issues",
-                "source": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/tree/v0.0.2"
+                "source": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/tree/v0.0.4"
             },
-            "time": "2022-12-12T13:39:47+00:00"
+            "time": "2022-12-12T22:19:32+00:00"
         },
         {
             "name": "deegitalbe/server-authorization",
