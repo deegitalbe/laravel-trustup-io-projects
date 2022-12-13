@@ -6,7 +6,7 @@ use Deegitalbe\LaravelTrustupIoProjects\Api\credentials\ProjectCredential;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Responses\Project\IndexResponseContract;
-
+use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Henrotaym\LaravelApiClient\Contracts\ClientContract;
 use Henrotaym\LaravelApiClient\Contracts\RequestContract;
 
@@ -32,7 +32,7 @@ class ProjectEndpoint implements ProjectEndpointContract
 
         if ($request->hasAppKeys()) {
             $implement->addQuery([
-                'app_keys' => $request->getAppKeys()->all(),
+                'app_keys' => $request->getAppKeys()->map(fn (ProjectAppKey $appKey) => $appKey->value)->all(),
             ]);
         }
 
