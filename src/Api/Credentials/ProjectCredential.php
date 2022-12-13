@@ -11,6 +11,6 @@ class ProjectCredential extends JsonCredential
     public function prepare(RequestContract &$request)
     {
         parent::prepare($request);
-        $request->setBaseUrl('trustup-io-projects/api');
+        $request->setBaseUrl(env('TRUSTUP_IO_PROJECTS_URL') . '/api');
     }
 }
