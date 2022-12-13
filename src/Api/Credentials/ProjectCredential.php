@@ -1,6 +1,6 @@
 <?php
 
-namespace Deegitalbe\LaravelTrustupIoProjects\Api\credentials;
+namespace Deegitalbe\LaravelTrustupIoProjects\Api\Credentials;
 
 use Deegitalbe\ServerAuthorization\Credential\AuthorizedServerCredential;
 use Henrotaym\LaravelApiClient\Contracts\RequestContract;
