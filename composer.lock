@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "926e4ecef14cab463a205568da6a02cd",
+    "content-hash": "3355e5f6f894abbb1b25bdd2551457c9",
     "packages": [
         {
             "name": "deegitalbe/laravel-trustup-io-auth-client",
-            "version": "v0.0.27",
+            "version": "v0.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deegitalbe/laravel-trustup-io-auth-client.git",
-                "reference": "835d1b94a2e4268df4fbc4de5ade188451d3821e"
+                "reference": "efdac4068d9f98835097ceaa71c3859fdc211cd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-auth-client/zipball/835d1b94a2e4268df4fbc4de5ade188451d3821e",
-                "reference": "835d1b94a2e4268df4fbc4de5ade188451d3821e",
+                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-auth-client/zipball/efdac4068d9f98835097ceaa71c3859fdc211cd6",
+                "reference": "efdac4068d9f98835097ceaa71c3859fdc211cd6",
                 "shasum": ""
             },
             "require": {
-                "deegitalbe/laravel-trustup-io-external-model-relations": "^0.0.4",
+                "deegitalbe/laravel-trustup-io-external-model-relations": "^0.0.5",
                 "deegitalbe/server-authorization": "^1.2",
                 "henrotaym/laravel-api-client": "^1.6",
                 "henrotaym/laravel-package-versioning-config": "^1.3"
@@ -56,22 +56,22 @@
             "description": "Basic versioned php package.",
             "support": {
                 "issues": "https://github.com/deegitalbe/laravel-trustup-io-auth-client/issues",
-                "source": "https://github.com/deegitalbe/laravel-trustup-io-auth-client/tree/v0.0.27"
+                "source": "https://github.com/deegitalbe/laravel-trustup-io-auth-client/tree/v0.0.28"
             },
-            "time": "2022-12-13T10:19:21+00:00"
+            "time": "2022-12-15T16:43:25+00:00"
         },
         {
             "name": "deegitalbe/laravel-trustup-io-external-model-relations",
-            "version": "v0.0.4",
+            "version": "v0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations.git",
-                "reference": "c3e6711120b923d595f7a172439af07a455ff68d"
+                "reference": "49c00a222d1ef2960f65bbde4f5f83182d7d2435"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-external-model-relations/zipball/c3e6711120b923d595f7a172439af07a455ff68d",
-                "reference": "c3e6711120b923d595f7a172439af07a455ff68d",
+                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-external-model-relations/zipball/49c00a222d1ef2960f65bbde4f5f83182d7d2435",
+                "reference": "49c00a222d1ef2960f65bbde4f5f83182d7d2435",
                 "shasum": ""
             },
             "require": {
@@ -109,9 +109,9 @@
             "description": "Basic versioned php package.",
             "support": {
                 "issues": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/issues",
-                "source": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/tree/v0.0.4"
+                "source": "https://github.com/deegitalbe/laravel-trustup-io-external-model-relations/tree/v0.0.5"
             },
-            "time": "2022-12-12T22:19:32+00:00"
+            "time": "2022-12-15T16:07:13+00:00"
         },
         {
             "name": "deegitalbe/server-authorization",
@@ -1522,20 +1522,20 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.20.0",
+            "version": "v1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b"
+                "reference": "92efad6a967f0b79c499705c69b662f738cc9e4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/37f751c67a5372d4e26353bd9384bc03744ec77b",
-                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/92efad6a967f0b79c499705c69b662f738cc9e4d",
+                "reference": "92efad6a967f0b79c499705c69b662f738cc9e4d",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0",
+                "php": "^7.4 || ^8.0",
                 "psr/container": "^1.0 || ^2.0",
                 "symfony/deprecation-contracts": "^2.2 || ^3.0"
             },
@@ -1546,7 +1546,8 @@
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "doctrine/persistence": "^1.3 || ^2.0",
                 "ext-intl": "*",
-                "symfony/phpunit-bridge": "^4.4 || ^5.2"
+                "phpunit/phpunit": "^9.5.26",
+                "symfony/phpunit-bridge": "^5.4.16"
             },
             "suggest": {
                 "doctrine/orm": "Required to use Faker\\ORM\\Doctrine",
@@ -1558,7 +1559,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.20-dev"
+                    "dev-main": "v1.21-dev"
                 }
             },
             "autoload": {
@@ -1583,9 +1584,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.20.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.21.0"
             },
-            "time": "2022-07-20T13:12:54+00:00"
+            "time": "2022-12-13T13:54:32+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3217,16 +3218,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.20",
+            "version": "9.2.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980"
+                "reference": "3f893e19712bb0c8bc86665d1562e9fd509c4ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/af7463c955007de36db0c5e26d03e2f933c2e980",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/3f893e19712bb0c8bc86665d1562e9fd509c4ef0",
+                "reference": "3f893e19712bb0c8bc86665d1562e9fd509c4ef0",
                 "shasum": ""
             },
             "require": {
@@ -3282,7 +3283,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.20"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.21"
             },
             "funding": [
                 {
@@ -3290,7 +3291,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-13T07:49:28+00:00"
+            "time": "2022-12-14T13:26:54+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -8172,5 +8173,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }
