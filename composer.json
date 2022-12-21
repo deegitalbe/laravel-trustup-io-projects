@@ -16,7 +16,7 @@
     "require": {
         "henrotaym/laravel-package-versioning-config": "^1.3",
         "henrotaym/laravel-api-client": "^1.6",
-        "deegitalbe/laravel-trustup-io-auth-client": "^0.0.29"
+        "deegitalbe/laravel-trustup-io-auth-client": "^1.0.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
