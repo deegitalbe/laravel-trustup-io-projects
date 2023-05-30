@@ -2,7 +2,7 @@
 
 namespace Deegitalbe\LaravelTrustupIoProjects\Api\Endpoints;
 
-use Deegitalbe\LaravelTrustupIoProjects\Api\credentials\ProjectCredential;
+use Deegitalbe\LaravelTrustupIoProjects\Api\Credentials\ProjectCredential;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Endpoints\ProjectEndpointContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Requests\Project\IndexRequestContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Api\Responses\Project\IndexResponseContract;

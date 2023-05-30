@@ -18,4 +18,6 @@ enum ProjectAppKey: string
     case WEBSITE_MANAGER = "website-manager";
     case TRUSTUP_IO_CHANGELOG = "trustup-io-changelog";
     case TRUSTUP_IO_TICKETING = "trustup-io-ticketing";
+    case WORKSITE = "worksite-app";
+    case WORKSITE_ADMIN = "worksite-admin";
 }
