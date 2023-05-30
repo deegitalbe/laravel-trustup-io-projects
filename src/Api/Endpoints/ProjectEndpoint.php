@@ -11,7 +11,6 @@ use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
 use Henrotaym\LaravelApiClient\Contracts\ClientContract;
 use Henrotaym\LaravelApiClient\Contracts\RequestContract;
 
-
 class ProjectEndpoint implements ProjectEndpointContract
 {
 
