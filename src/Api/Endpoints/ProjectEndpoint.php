@@ -43,6 +43,9 @@ class ProjectEndpoint implements ProjectEndpointContract
 
         $response = $this->client->try($implement, "Cannot get all projects");
 
+        if ($response->failed()) {
+            report($response->error());
+        }
 
         return app()->make(IndexResponseContract::class)->setResponse($response);
     }

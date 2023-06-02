@@ -32,7 +32,14 @@ interface ProjectContract extends ExternalModelContract
      * 
      * @return 
      */
-    public function getAppKey(): ProjectAppKey;
+    public function getAppKey(): ?ProjectAppKey;
+
+    /**
+     * Getting raw app key
+     * 
+     * @return
+     */
+    public function getRawAppKey(): string;
 
     /**
      * Getting title.

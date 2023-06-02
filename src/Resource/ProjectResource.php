@@ -20,7 +20,7 @@ class ProjectResource extends JsonResource
         return [
             "id" => $this->resource->getId(),
             "uuid" => $this->resource->getUuid(),
-            "app_key" => $this->resource->getAppKey(),
+            "app_key" => $this->resource->getAppKey() ?? $this->resource->getRawAppKey(),
             "title" => $this->resource->getTitle(),
             "image" => $this->resource->getImage(),
             "url" => $this->resource->getUrl(),

@@ -9,6 +9,8 @@ use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectAppKey;
 use Deegitalbe\LaravelTrustupIoAuthClient\Contracts\Models\TrustupUserContract;
 use Deegitalbe\LaravelTrustupIoProjects\Contracts\Models\ProjectContract;
 use Deegitalbe\LaravelTrustupIoProjects\Enums\ProjectGroup;
+use Deegitalbe\LaravelTrustupIoProjects\Exceptions\InvalidAppKey;
+use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 
 /**
  * Representing a project.
@@ -41,9 +43,21 @@ class Project implements ProjectContract
      * 
      * @return 
      */
-    public function getAppKey(): ProjectAppKey
+    public function getAppKey(): ?ProjectAppKey
     {
-        return ProjectAppKey::from($this->attributes['app_key']);
+        return ProjectAppKey::tryFrom($this->attributes['app_key']);
+    }
+
+    public function getRawAppKey(): string
+    {
+        return $this->attributes['app_key'];
+    }
+
+    private function checkValidAppKey(): bool
+    {
+        if (ProjectAppKey::tryFrom($this->attributes['app_key'])) return true;
+
+        return false;
     }
 
     /**
@@ -142,6 +156,14 @@ class Project implements ProjectContract
     public function fill(array $attributes): ProjectContract
     {
         $this->attributes = $attributes;
+
+
+        if (!$this->checkValidAppKey()) {
+            $exception = new InvalidAppKey();
+            $exception->setMissingAppKey($this->getRawAppKey());
+            report($exception);
+        }
+
         return $this;
     }
 }
